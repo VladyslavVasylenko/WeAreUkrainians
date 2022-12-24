@@ -29,6 +29,9 @@
   content: "Ψ";
   color: #E5B000;
 }
+* li {
+  list-style-type: none;
+}
 
 .container {
   width: 100%;
@@ -102,53 +105,54 @@
   padding-left: 10px;
 }
 .container .container-menu .menu .menu-list .menu-list__item, .container .container-menu .menu .menu-list a {
-  list-style-type: none;
   font-size: 3vh;
   font-weight: bold;
   letter-spacing: 1px;
   padding-bottom: 5px;
 }
-.container .container-icon {
-  position: absolute;
-  top: 1vw;
-  right: 5vh;
-}
-.container .container-icon .icon {
-  box-shadow: 0 0 10px black;
-  border-radius: 0 30%;
-  padding: 15px;
-  transition: all 0.5s ease-in;
-  background-color: rgba(255, 255, 255, 0.416);
-}
-.container .container-icon .icon .icon__title {
-  cursor: pointer;
-  letter-spacing: 1.5px;
-  font-size: 4vh;
-  font-weight: bold;
-  padding-bottom: 10px;
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(to bottom, #0066ff 50%, #fff200 50%);
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-  transition: all 0.5s ease-in-out;
-}
-.container .container-icon .icon .icon__title:hover {
-  background-image: linear-gradient(to bottom, #0066ff 30%, #fff200 70%);
-  box-shadow: 0 0 1px black;
-  border-radius: 0 30% 30% 0;
-}
-.container .container-icon .icon .icon-list {
+.container .container-menu .menu .menu-list .list-second {
   display: flex;
-  padding-left: 10px;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.container .container-icon .icon .icon-list .icon-list__item {
-  list-style-type: none;
-  font-size: 3vh;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding-right: 15px;
-  text-transform: uppercase;
+.container .container-menu .menu .menu-list .list-second .list-second__item, .container .container-menu .menu .menu-list .list-second a {
+  font-size: 4vh;
+  color: #0066ff;
+  transition: all 0.8s ease-in-out;
+}
+.container .container-menu .menu .menu-list .list-second .list-second__item, .container .container-menu .menu .menu-list .list-second a:hover {
+  font-size: 4vh;
+  color: #fff200;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.427);
+    background-image: url(../img/We-Support-Ukraine-Flag-PNG-Images.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0.5%;
+  }
+  .container .title {
+    font-weight: bold;
+    font-size: 8vh;
+  }
+  .container .container-menu {
+    position: absolute;
+    left: 1vh;
+    top: 30vw;
+  }
+  .container .container-menu .menu {
+    box-shadow: 0 0 10px black;
+    border-radius: 0 30%;
+    padding: 10px;
+    transition: all 0.5s ease-in;
+    background-color: rgba(255, 255, 255, 0.977);
+  }
+  .container .container-menu .menu .menu__title {
+    font-size: 3.5vh;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -22,11 +22,11 @@
   list-style: none;
 }
 * details summary::before {
-  content: "Ψ";
+  content: "☰";
   color: #004189;
 }
 * details[open] summary::before {
-  content: "Ψ";
+  content: "✖";
   color: #E5B000;
 }
 * li {
@@ -85,6 +85,7 @@
   font-size: 4vh;
   font-weight: bold;
   padding-bottom: 5px;
+  text-align: center;
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
@@ -96,8 +97,6 @@
 }
 .container .container-menu .menu .menu__title:hover {
   background-image: linear-gradient(to bottom, #0066ff 30%, #fff200 70%);
-  box-shadow: 0 0 1px black;
-  border-radius: 0 30% 30% 0;
 }
 .container .container-menu .menu .menu-list {
   display: flex;

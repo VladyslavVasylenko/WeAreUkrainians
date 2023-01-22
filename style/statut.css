@@ -16,7 +16,7 @@
 }
 * a:active {
   color: #ffffff;
-  text-shadow: black 0 0 2px;
+  text-shadow: rgb(102, 101, 101) 0 0 2px;
 }
 * summary {
   list-style: none;
@@ -38,34 +38,11 @@
   height: 100%;
   margin: 0 auto;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.427);
-  background-image: url(../img/We-Support-Ukraine-Flag-PNG-Images.png);
+  background-color: rgba(255, 255, 255, 0.344);
+  background-image: url(../img/3.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0.5%;
-}
-.container .logo {
-  display: block;
-  width: 30%;
-  height: 30%;
-  margin: 0 auto;
-  border-radius: 50%;
-  box-shadow: 0px 0px 5px rgb(0, 0, 0);
-  margin-top: 1%;
-}
-.container .title {
-  font-weight: bold;
-  font-size: 10vh;
-  text-align: center;
-  margin-top: 5%;
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(to bottom, #0066ff 50%, #fff200 50%);
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
 }
 .container .container-menu {
   position: absolute;
@@ -137,21 +114,49 @@
   background-image: linear-gradient(to bottom, #0066ff 80%, #fff200 20%);
   text-shadow: none;
 }
+.container .statut {
+  width: 50vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10% 5% 10% 5%;
+  background-color: rgba(255, 255, 255, 0.4352941176);
+}
+.container .statut .title {
+  font-size: 3vh;
+  padding-bottom: 30px;
+}
+.container .statut .title .title__name {
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(to bottom, #0066ff 50%, #fff200 50%);
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+.container .statut .statut-list {
+  font-size: 1, 5vh;
+  font-weight: bold;
+}
+.container .statut .statut-list .statut-list__line {
+  list-style-type: "-";
+  padding: 0 0 1vh 1vh;
+  letter-spacing: 1, 5px;
+}
+.container .statut .statut-list .statut-list__line .links {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: black 0 0 10px;
+}
+.container .statut .statut-list .statut-list__line a.links:hover {
+  color: #0066ff;
+}
 
 @media screen and (max-width: 450px) {
   .container {
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.427);
-    background-image: url(../img/We-Support-Ukraine-Flag-PNG-Images.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 0.5%;
-  }
-  .container .title {
-    font-weight: bold;
-    font-size: 8vh;
   }
   .container .container-menu {
     position: absolute;
@@ -168,4 +173,15 @@
   .container .container-menu .menu .menu__title {
     font-size: 3.5vh;
   }
-}/*# sourceMappingURL=style.css.map */
+  .container .statut {
+    width: 80vw;
+    overflow: scroll;
+  }
+  .container .statut .title {
+    font-size: 2, 5vh;
+  }
+  .container .statut .statut-list {
+    font-size: 1, 1vh;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=statut.css.map */

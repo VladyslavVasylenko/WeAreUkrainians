@@ -119,6 +119,7 @@
   height: 100vh;
   text-align: center;
   text-shadow: 0 0 5px black;
+  overflow: scroll;
 }
 .container .contant .contant__title {
   color: transparent;
@@ -128,9 +129,9 @@
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
-  padding: 30px 0 30px 0;
   font-size: 5h;
   text-shadow: 0px 0px 0px;
+  margin: 50px 0 30px 0;
 }
 .container .contant .contant-list {
   width: 50vw;
@@ -143,17 +144,18 @@
   font-weight: bold;
   color: rgb(255, 255, 255);
   text-align: justify;
+  letter-spacing: 1px;
   padding-left: 5px;
   padding-bottom: 10px;
 }
 
 @media screen and (max-width: 1200px) {
   .contant {
-    overflow: scroll;
     transition: all 0.5s ease-in-out;
   }
   .contant .contant-list {
     width: 100vw;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 450px) {
@@ -177,9 +179,9 @@
     font-size: 3.5vh;
   }
   .container .contant {
-    width: 100vw;
+    width: 80vw;
     height: 100vh;
-    text-align: center;
+    margin: 0 auto;
     text-shadow: 0 0 5px black;
   }
   .container .contant .contant__title {
@@ -187,5 +189,8 @@
   }
   .container .contant .contant-list {
     width: 85%;
+  }
+  .container .contant .contant-list .contant-list__item {
+    text-align: left;
   }
 }/*# sourceMappingURL=advice.css.map */

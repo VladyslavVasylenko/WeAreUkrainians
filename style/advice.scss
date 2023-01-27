@@ -141,6 +141,7 @@
     height: 100vh;
     text-align: center;
     text-shadow: 0 0 5px black;
+    overflow: scroll;
 
     .contant__title { 
       color: transparent;
@@ -148,9 +149,9 @@
       background-image: linear-gradient(to bottom, #0066ff 50%, #fff200 50%);
       -webkit-text-fill-color: transparent;
       box-decoration-break: clone;
-      padding: 30px 0 30px 0;
       font-size: 5h;
       text-shadow: 0px 0px 0px;
+      margin: 50px 0 30px 0;
     }
 
     .contant-list {
@@ -164,6 +165,7 @@
         font-weight: bold;
         color: rgb(255, 255, 255);
         text-align: justify;
+        letter-spacing: 1px;
         padding-left: 5px;
         padding-bottom: 10px;
       }
@@ -173,11 +175,11 @@
 
 @media screen and (max-width: 1200px) {
   .contant{
-    overflow: scroll;
     transition: all .5s ease-in-out;
 
     .contant-list {
       width: 100vw;
+      margin: 0 auto;
     }
   }
 }
@@ -206,9 +208,9 @@
     }
 
     .contant {
-      width: 100vw;
+      width: 80vw;
       height: 100vh;
-      text-align: center;
+      margin: 0 auto;
       text-shadow: 0 0 5px black;
   
       .contant__title { 
@@ -217,6 +219,10 @@
   
       .contant-list {
         width: 85%;
+
+        .contant-list__item {
+          text-align: left;
+        }
       }
     }
   }

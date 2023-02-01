@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: black;
+    transition: all .5s ease-in-out;
+  }
+
+  a:hover {
+    color: #ffffff;
+    text-shadow: black 0 0 3px;
+  }
+
+  a:active {
+    color: #ffffff;
+    text-shadow: rgb(102, 101, 101) 0 0 2px;
+  }
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  summary {
+    list-style: none
+  }
+
+  details summary::before { 
+    // content:"✌";
+    // content: 'Ψ';
+    content: '☰';
+    color: #004189;
+  }
+
+  details[open] summary::before { 
+    // content:"☝";
+    // content: 'Ψ';
+    content: '✖';
+    color: #E5B000;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.344);
+  background-image:url(../img/04033.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+
+  // Menu
+  .container-menu {
+    position: absolute;
+    left: 5vh;
+    top: 1vw;
+
+    .menu {
+      box-shadow: 0 0 10px black;
+      border-radius: 0 30%;
+      padding: 15px;
+      transition: all .5s ease-in;
+      background-color:rgba(255, 255, 255, 0.416);
+
+      .menu__title { 
+        cursor: pointer;
+        letter-spacing: 1.5px;
+        font-size: 4vh;
+        font-weight: bold;
+        padding-bottom: 5px;
+        text-align: center;
+
+        color: transparent;
+        background-clip: text;
+        background-image: linear-gradient(to bottom, #0066ff 50%, #fff200 50%);
+        -webkit-text-fill-color: transparent;
+        box-decoration-break: clone;
+        transition: all .5s ease-in-out;
+      }
+
+      .menu__title:hover {
+        background-image: linear-gradient(to bottom, #0066ff 30%, #fff200 70%);
+        // box-shadow: 0 0 1px black;
+        // border-radius: 0 30% 30% 0;
+      }
+
+      .menu-list { 
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+
+        .menu-list__item, a{ 
+          font-size: 3vh;
+          font-weight: bold;
+          letter-spacing: 1px;
+          padding-bottom: 5px;
+        }
+
+        .list-second {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+
+          .list-second__item, a{ 
+            font-size: 4vh;
+            color: #0066ff;
+            transition: all .8s ease-in-out;
+          }
+
+          .list-second__item, a:hover{ 
+            font-size: 4vh;
+            color: #fff200;
+          }
+        }
+
+        .active {
+          font-weight:bold;
+          color: transparent;
+          background-clip: text;
+          background-image: linear-gradient(to bottom, #0066ff 50%, #fff200 50%);
+          -webkit-text-fill-color: transparent;
+          box-decoration-break: clone;
+        }
+
+        a.active:hover {
+          background-image: linear-gradient(to bottom, #0066ff 80%, #fff200 20%);
+          text-shadow: none;
+        }
+      }
+    }
+  }
+
+  .table {
+    width: 80%;
+    height: 50vh;
+    margin: 3.5% auto;
+    padding: 1.5%;
+    background-color: #00000077;
+    box-shadow: 0 0 5px black;
+
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+    letter-spacing: 1.5px;
+
+    .table__title {
+      padding: 5% 0 3% 0;
+      font-size: 3vw;
+    }
+
+    & th, 
+    & td{
+      padding: 12px 15px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(13, 255, 0, 0.499);
+      font-size: 18px;
+    }
+
+    & thead th {
+      border: 1px solid rgba(0, 136, 255, 0.495);
+      border-right: 0;
+      border-left: 0;
+      border-bottom: 0;
+    }
+
+    & tbody th {
+      text-align: left;
+      padding-left: 50px;
+      border: 1px solid rgba(255, 123, 0, 0.551);
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container {
+    .table {
+      .table__title {
+        padding: 5% 0 3% 0;
+        font-size: 20px;
+      }
+
+      & th, 
+      & td{
+        font-size: 15px;
+      }
+
+      & tbody th {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 100%;
+    height: 100%;
+
+    .container-menu {
+      position: absolute;
+      left: 1vh;
+      top: 30vw;
+
+      .menu {
+        box-shadow: 0 0 10px black;
+        border-radius: 0 30%;
+        padding: 10px;
+        transition: all .5s ease-in;
+        background-color:rgba(255, 255, 255, 0.977);
+
+        .menu__title { 
+          font-size: 3.5vh;
+        }
+      }
+    }
+
+  }
+}

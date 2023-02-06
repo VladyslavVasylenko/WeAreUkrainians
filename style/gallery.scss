@@ -26,15 +26,11 @@
   }
 
   details summary::before { 
-    // content:"✌";
-    // content: 'Ψ';
     content: '☰';
     color: #004189;
   }
 
   details[open] summary::before { 
-    // content:"☝";
-    // content: 'Ψ';
     content: '✖';
     color: #E5B000;
   }
@@ -46,11 +42,10 @@
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 80vh;
   margin: 0 auto;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.344);
-  background-image:url(../img/disig.jpg);
+  background-image:url(../img/We-Support-Ukraine-Flag-PNG-Images.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,6 +55,7 @@
     position: fixed;
     left: 5vh;
     top: 1vw;
+    z-index: 9999;
 
     .menu {
       box-shadow: 0 0 10px black;
@@ -86,8 +82,6 @@
 
       .menu__title:hover {
         background-image: linear-gradient(to bottom, #0066ff 30%, #fff200 70%);
-        // box-shadow: 0 0 1px black;
-        // border-radius: 0 30% 30% 0;
       }
 
       .menu-list { 
@@ -136,46 +130,67 @@
     }
   }
 
-  .statut { 
-    width: 50vw;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 10% 5% 10% 5%;
-    background-color: #ffffff6f;
+  // Gallery
+  .gallery {
+    margin-top: 5%;
 
-    .title {
-      font-size: 3vh;
-      padding-bottom: 30px;
+    &__short { 
+      max-width: 1600px;
+      padding: 50px 20px;
+      margin: 0 auto;
 
-      .title__name { 
+      .title {
+        text-align: center;
+        margin-bottom: 3%;
         font-weight:bold;
-        color: transparent;
-        background-clip: text;
-        background-image: linear-gradient(to bottom, #0066ff 50%, #fff200 50%);
-        -webkit-text-fill-color: transparent;
-        box-decoration-break: clone;
+        color: #ffffff;
+        // color: transparent;
+        // background-clip: text;
+        // background-image: linear-gradient(to bottom, #0066ff 50%, #fff200 50%);
+        // -webkit-text-fill-color: transparent;
+        // box-decoration-break: clone;
+        transform: translateY(-2px);
+        text-shadow: 3px 3px 3px rgb(0, 0, 0);
+      }
+
+      #gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 20px;
       }
     }
 
-
-    .statut-list {
-      font-size: 1,5vh;
-      font-weight: bold;
-
-      .statut-list__line { 
-        list-style-type: "-";
-        padding: 0 0 1vh 1vh;
-        letter-spacing: 1,5px;
-
-      .links {
-        font-weight:bold;
-        color: rgb(255, 255, 255);
-        text-shadow: black 0 0 10px;
-      }
-      a.links:hover {
-        color: #0066ff;
-      }
+    .galleryImg {
+      max-width: 100%;
+      border-radius: 10px;
+      position: relative;
+      transition: transform 250ms;
+      cursor: pointer;
     }
+
+    .galleryImg:hover {
+      transform: translateY(-2px);
+      box-shadow: 3px 3px 10px black;
+    }
+
+    #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.95);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: 250ms transform;
+      padding: 50px;
+    }
+
+    #selectedImage {
+      max-height: 100%;
     }
   }
 }
@@ -200,20 +215,6 @@
         .menu__title { 
           font-size: 3.5vh;
         }
-      }
-    }
-
-    .statut { 
-      width: 80vw;
-      overflow: scroll;
-  
-      .title {
-        font-size: 2,5vh;
-      }
-  
-      .statut-list {
-        font-size: 1,1vh;
-        font-weight: bold;
       }
     }
   }

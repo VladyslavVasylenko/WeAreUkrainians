@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="./img/logo/WeAreUkrainians!.png" type="image/x-icon">
-  <link rel="stylesheet" href="./style/timebatl.css">
+  <link rel="stylesheet" href="./style/gallery.css">
 
   <script src="https://kit.fontawesome.com/15987df765.js" crossorigin="anonymous"></script>
 
@@ -28,10 +28,10 @@
             <a href="./advice.html">Поради</a>
           </li>
           <li class="menu-list__item">
-            <a href="./timebatl.html" class="active">Графік</a>
+            <a href="./timebatl.html">Графік</a>
           </li>
           <li class="menu-list__item">
-            <a href="./gallery.html">Галерея</a>
+            <a href="./gallery.html" class="active">Галерея</a>
           </li>
           <ul class="list-second">
             <li class="menu-list__item">
@@ -54,47 +54,18 @@
       </details>
     </div>
 
-    <table class="table">
-      <caption class="table__title">Графік онлайн</caption>
+    <div class="gallery">
+      <div class="gallery__short">
+        <h1 class="title">Галерея неймовірних результатів!</h1>
+        <div id="gallery"></div>
+      </div>
 
-      <thead>
-        <tr>
-          <th>День</th>
-          <th>Час</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <th>Понеділок</th>
-          <td>з 18.00 - по 21.00</td>
-        </tr>
-        <tr>
-          <th>Вівторок</th>
-          <td>з 18.00 - по 21.00</td>
-        </tr>
-        <tr>
-          <th>Середа</th>
-          <td>з 18.00 - по 21.00</td>
-        </tr>
-        <tr>
-          <th>Четвер</th>
-          <td>з 18.00 - по 21.00</td>
-        </tr>
-        <tr>
-          <th>П'ятниця</th>
-          <td>з 18.00 - по 21.00</td>
-        </tr>
-        <tr>
-          <th>Субота</th>
-          <td>з 18.00 - по 21.00</td>
-        </tr>
-        <tr>
-          <th>Неділя</th>
-          <td>з 18.00 - по 21.00</td>
-        </tr>
-      </tbody>
-    </table>
+      <div id="popup">
+        <img src="" alt="" id="selectedImage">
+      </div>
+    </div>
   </div>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>

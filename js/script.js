@@ -8,13 +8,13 @@ const selectedIndex = null;
 imageIndexes.forEach(i => {
   const image = document.createElement('img');
 
-  image.src = `/img/gallery/shot-${i}.jpg`;
+  image.src = `./img/gallery/shot-${i}.jpg`;
   image.alt = `Cover for image ${i}`;
   image.classList.add('galleryImg');
 
   image.addEventListener('click', () => {
     popup.style.transform = `translateY(0)`;
-    selectedImage.src = `/img/gallery/shot-${i}.jpg`;
+    selectedImage.src = `./img/gallery/shot-${i}.jpg`;
     selectedImage.alt = `Cover for image ${i}`;
   });
 

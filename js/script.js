@@ -2,7 +2,7 @@ const gallery = document.getElementById('gallery'),
       popup = document.getElementById('popup'),
       selectedImage = document.getElementById('selectedImage');
 
-const imageIndexes = [1, 2, 3, 4,];
+const imageIndexes = [1, 2, 3, 4, 5,];
 const selectedIndex = null;
 
 imageIndexes.forEach(i => {

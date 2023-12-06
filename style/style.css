@@ -67,6 +67,16 @@
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
 }
+@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
+  .container .title {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: url(../img/uki.png);
+    background-size: cover;
+    background-position: center;
+  }
+}
 .container .container-menu {
   position: fixed;
   left: 5vh;
@@ -94,6 +104,16 @@
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
   transition: all 0.5s ease-in-out;
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) or (-webkit-background-clip: text) {
+  .container .container-menu .menu .menu__title {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: url(../img/uki.png);
+    background-size: cover;
+    background-position: center;
+  }
 }
 .container .container-menu .menu .menu__title:hover {
   background-image: linear-gradient(to bottom, #0066ff 30%, #fff200 70%);

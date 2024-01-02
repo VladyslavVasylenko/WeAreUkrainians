@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="Cache-control" content="max-age=604800">
+
+  <link rel="shortcut icon" href="./img/logo/WeAreUkrainians!.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style/form.css">
+
+  <script src="https://kit.fontawesome.com/15987df765.js" crossorigin="anonymous"></script>
+
+  <title>Form</title>
+</head>
+<body>
+  <div class="container-menu">
+    <details class="menu">
+      <summary class="menu__title"></summary>
+      <ul class="menu-list">
+        <li class="menu-list__item">
+          <a href="./index.html">Стартова</a>
+        </li>
+        <li class="menu-list__item">
+          <a href="./statut.html">Статут</a>
+        </li>
+        <li class="menu-list__item">
+          <a href="./advice.html">Поради</a>
+        </li>
+        <li class="menu-list__item">
+          <a href="./timebatl.html">Графік</a>
+        </li>
+        <li class="menu-list__item">
+          <a href="./gallery.html">Галерея</a>
+        </li>
+        <ul class="list-second">
+          <li class="menu-list__item">
+            <a href="https://www.youtube.com/channel/UCy7NbsQJvoyqSyetQFXnPxA" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="menu-list__item">
+            <a href="https://discord.gg/esnuTX6" target="_blank">
+              <i class="fab fa-discord"></i>
+            </a>
+          </li>
+          <li class="menu-list__item main">
+            <a href="form.html" target="_blank">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </ul>
+    </details>
+  </div>
+
+<!-- Form  -->
+  <div class="box">
+    <form id="ajax-contact-form" action="https://formsubmit.co/wolfdream0312@gmail.com" enctype="multipart/form-data" method="post">
+      <div class="form-group">
+        <label for="name" class="label-name">Ім'я:</label>
+        <input id="name" name="name" type="text" required class="short-line" placeholder="You name">
+      </div>
+
+      <div class="form-group">
+        <label for="E-mail" class="label-name">E-mail:</label>
+        <input id="E-mail" name="E-mail" type="email" required class="short-line" placeholder="your_mail@gmail.com">
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="label-name">Повідомлення</label>
+        <textarea id="message" name="message" cols="40" rows="3" class="big-line" placeholder="Your message..."></textarea>
+      </div>
+
+      <div class="control-file">
+        <label for="file" class="label-name">
+          <i class="far fa-image"></i>
+          Додати скрін
+        </label>
+        <input id="file" name="file" type="file" style="visibility:hidden;">
+      </div>
+
+      <div> 
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+      </div>
+
+      <button class="btn" type="submit" id="submit">Відправити повідомлення</button>
+    </form>
+  </div>
+</body>
+</html>

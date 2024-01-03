@@ -57,36 +57,35 @@
 
 <!-- Form  -->
   <div class="box">
-    <form id="ajax-contact-form" action="https://formsubmit.co/wolfdream0312@gmail.com" enctype="multipart/form-data" method="post">
+    <form   
+      action="https://formspree.io/f/mayrydoe"
+      method="POST"
+      enctype="multipart/form-data"
+    >
       <div class="form-group">
         <label for="name" class="label-name">Ім'я:</label>
-        <input id="name" name="name" type="text" required class="short-line" placeholder="You name">
+        <input name="name" type="text" required class="short-line" placeholder="You name">
       </div>
 
       <div class="form-group">
-        <label for="E-mail" class="label-name">E-mail:</label>
-        <input id="E-mail" name="E-mail" type="email" required class="short-line" placeholder="your_mail@gmail.com">
+        <label for="email" class="label-name">E-mail:</label>
+        <input name="email" type="email" required class="short-line" placeholder="your_mail@gmail.com">
       </div>
 
       <div class="form-group">
         <label for="message" class="label-name">Повідомлення</label>
-        <textarea id="message" name="message" cols="40" rows="3" class="big-line" placeholder="Your message..."></textarea>
+        <textarea name="message" cols="40" rows="3" class="big-line" placeholder="Your message..."></textarea>
       </div>
 
-      <div class="control-file">
+      <!-- <div class="control-file">
         <label for="file" class="label-name">
           <i class="far fa-image"></i>
           Додати скрін
         </label>
-        <input id="file" name="file" type="file" style="visibility:hidden;">
-      </div>
+        <input name="attachment" type="file" accept="image/png, image/jpeg">
+      </div> -->
 
-      <div> 
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
-      </div>
-
-      <button class="btn" type="submit" id="submit">Відправити повідомлення</button>
+      <button class="btn" type="submit">Відправити повідомлення</button>
     </form>
   </div>
 </body>

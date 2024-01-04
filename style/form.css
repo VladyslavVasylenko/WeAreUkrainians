@@ -189,4 +189,24 @@ body .box form .btn:active {
   font-size: 16px;
   box-shadow: 1px 1px 1px 1px #0d7301;
   cursor: pointer;
+}
+@media screen and (max-width: 450px) {
+  body body {
+    padding: 5% 1% 0 0;
+  }
+  body .container-menu {
+    position: absolute;
+    left: 60%;
+    top: 3vw;
+  }
+  body .container-menu .menu {
+    box-shadow: 0 0 10px black;
+    border-radius: 0 30%;
+    padding: 10px;
+    transition: all 0.5s ease-in;
+    background-color: rgba(255, 255, 255, 0.977);
+  }
+  body .container-menu .menu .menu__title {
+    font-size: 3.5vh;
+  }
 }/*# sourceMappingURL=form.css.map */
